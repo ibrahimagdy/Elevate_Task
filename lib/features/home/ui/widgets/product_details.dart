@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:store_task/features/home/data/model/Product_model.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/styles.dart';
 
 class ProductDetails extends StatelessWidget {
-  const ProductDetails({super.key});
+  final ProductModel productModel;
+  const ProductDetails({super.key, required this.productModel});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +18,7 @@ class ProductDetails extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Nike Air Jordon Nike shoes flexible for woj',
+            productModel.title ?? '',
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
             style: TextStylesManger.font14BlueRegular,
@@ -25,7 +27,7 @@ class ProductDetails extends StatelessWidget {
           Row(
             children: [
               Text(
-                'EGP 1,200',
+                'EGP ${productModel.price}',
                 style: TextStylesManger.font14BlueRegular,
               ),
               horizontalSpace(16),
@@ -44,7 +46,7 @@ class ProductDetails extends StatelessWidget {
               Row(
                 children: [
                   Text(
-                    'Review (4.6)',
+                    'Review (${productModel.rating?.rate.toString()})',
                     style: TextStylesManger.font12BlueRegular,
                   ),
                   horizontalSpace(4),
