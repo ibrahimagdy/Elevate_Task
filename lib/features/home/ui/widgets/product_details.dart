@@ -18,7 +18,7 @@ class ProductDetails extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            productModel.title ?? '',
+            productModel.title,
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
             style: TextStylesManger.font14BlueRegular,
