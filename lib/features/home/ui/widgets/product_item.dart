@@ -22,7 +22,7 @@ class ProductItem extends StatelessWidget {
       ),
       child: Column(
         children: [
-          ProductImage(imageUrl: productModel.image!),
+          ProductImage(imageUrl: productModel.image),
           verticalSpace(8),
           ProductDetails(productModel: productModel),
         ],
