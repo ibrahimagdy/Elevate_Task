@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:store_task/core/di/dependency_injection.dart';
 import 'package:store_task/features/home/ui/home_screen.dart';
 
 void main() async{
   await ScreenUtil.ensureScreenSize();
+  setupGetIt();
   runApp(const MyApp());
 }
 

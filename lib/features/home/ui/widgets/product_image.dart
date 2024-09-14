@@ -3,7 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:store_task/core/theming/colors.dart';
 
 class ProductImage extends StatelessWidget {
-  const ProductImage({super.key});
+  final String imageUrl;
+  const ProductImage({super.key, required this.imageUrl});
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +20,7 @@ class ProductImage extends StatelessWidget {
               topRight: Radius.circular(12.r),
             ),
           ),
-          child: Image.network(
-              'https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/9909210d-48ba-459e-96f4-faab32a41ce7/WMNS+AIR+JORDAN+1+LOW.png'),
+          child: Image.network(imageUrl),
         ),
         Positioned(
           right: 0,

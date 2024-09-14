@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:store_task/features/home/ui/widgets/product_details.dart';
 import 'package:store_task/features/home/ui/widgets/product_image.dart';
-
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/colors.dart';
+import '../../data/model/Product_model.dart';
 
 class ProductItem extends StatelessWidget {
-  const ProductItem({super.key});
+  final ProductModel productModel;
+  const ProductItem({super.key, required this.productModel});
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +22,9 @@ class ProductItem extends StatelessWidget {
       ),
       child: Column(
         children: [
-          const ProductImage(),
+          ProductImage(imageUrl: productModel.image!),
           verticalSpace(8),
-          const ProductDetails(),
+          ProductDetails(productModel: productModel),
         ],
       ),
     );
