@@ -3,6 +3,19 @@
   The Task is to implement screen that shows a list of products in a recycler view using the following api :
  (https://fakestoreapi.com/products)
 
+ ## 📥  Installation
+
+1. **Clone the Repo:**
+
+   Clone the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/ibrahimagdy/Elevate_Task.git
+
+2. **Install Dependencies:**
+   ```bash
+   flutter pub get
+
 # 📱 screenshot from the implemented design
 
 <img width="443" alt="Screenshot 2024-09-14 at 8 05 11 PM" src="https://github.com/user-attachments/assets/60246afd-4c2a-4255-b526-78915e3fc330">
